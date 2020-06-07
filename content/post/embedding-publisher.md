@@ -19,17 +19,18 @@ Hugo creates static files which you can either copy into an existing webserver o
 4. copied `themes/even/layouts/partials/scripts.html` to `layouts/partials` and added two lines  to import the TEI Publisher component library ([view on github](https://github.com/wolfgangmm/tei-publisher-blog-demo/blob/master/layouts/partials/scripts.html)):
     {{< pb-code-highlight html >}}
     <script src="https://unpkg.com/@webcomponents/webcomponentsjs@2.4.3/webcomponents-loader.js"></script>
+    
     <script type="module" src="https://unpkg.com/@teipublisher/pb-components@latest/dist/pb-components-bundle.js"></script>
     {{</ pb-code-highlight >}}
 5. in the same way copied `themes/even/layouts/partials/header.html` to change the logo
 6. created a [custom css file](https://github.com/wolfgangmm/tei-publisher-blog-demo/blob/master/static/css/components.css) in `static/css` and linked it from `config.toml`
 7. generated a set of favicons and extracted them into `/static`
 
-Given this setup, we can start embedding content provided by TEI Publisher into our markdown:
+Given this setup, we can start using TEI Publisher web components from within our markdown.
 
 ## Embed HTML directly
 
-For sure you can directly embed HTML into markdown as demonstrated by the example below:
+The easiest approach is to directly embed HTML into markdown as demonstrated by the example below:
 
 <pb-page endpoint="https://teipublisher.com/exist/apps/tei-publisher" emit="kant" class="embedded">
     <pb-document id="kant" path="test/kant_rvernunft_1781.TEI-P5.xml" odd="dta"></pb-document>
