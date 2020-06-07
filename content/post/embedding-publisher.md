@@ -5,7 +5,11 @@ tags: ['TEI Publisher', 'webcomponents']
 draft: false
 ---
 
-This example shows how to embed TEI content into a static website using markdown for the content pages. The site was created with [Hugo](https://gohugo.io/), a popular static website generator, which allows you to get a simple website, e.g. a blog, up and running within minutes. Steps I applied:
+This example shows how to embed TEI content into a static website using markdown for the content pages. The site was created with [Hugo](https://gohugo.io/), a popular static website generator, which allows you to get a simple website, e.g. a blog, up and running within minutes.
+
+Hugo creates static files which you can either copy into an existing webserver of your own, or host on free services like [render](https://render.com/). Obviously you still need a TEI Publisher instance somewhere which hosts the TEI content.
+
+## Setup
 
 1. created a new site with `hugo new site`
 2. installed a standard theme ([even](https://github.com/olOwOlo/hugo-theme-even)) into `themes`
