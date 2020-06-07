@@ -1,0 +1,30 @@
+<pb-page endpoint="https://teipublisher.com/exist/apps/tei-publisher" emit='{{ .Get "id" }}'>
+    <pb-document id='{{ .Get "id" }}' path='{{ .Get "document" }}' odd='{{ .Get "odd" }}'></pb-document>
+    <pb-view src='{{ .Get "id" }}' xpath='{{ or (.Get "header-xpath") "//teiHeader/fileDesc/titleStmt/title" }}' 
+        emit='{{ .Get "id" }}' subscribe='{{ .Get "id" }}'>
+        <pb-param name="header" value="short" />
+    </pb-view>
+    {{ if .Get "xpath" }}
+    <pb-view class="transcription" src='{{ .Get "id" }}' xpath='{{ .Get "xpath" }}'
+        view='{{ (or (.Get "view") "div") }}' column-separator=".tei-cb"
+        append-footnotes animation emit='{{ .Get "id" }}' subscribe='{{ .Get "id" }}'></pb-view>
+    {{ else }}
+    <pb-view class="transcription" src='{{ .Get "id" }}'
+        view='{{ (or (.Get "view") "div") }}' column-separator=".tei-cb"
+        append-footnotes animation emit='{{ .Get "id" }}' subscribe='{{ .Get "id" }}'></pb-view>
+    {{ end }}
+    <footer class="nav">
+        <!-- Navigate to next page -->
+        <pb-navigation direction="forward" keyboard="right" emit='{{ .Get "id" }}' subscribe='{{ .Get "id" }}'>
+            <paper-button>
+                <iron-icon icon="icons:chevron-right"></iron-icon>
+            </paper-button>
+        </pb-navigation>
+        <!-- Navigate to previous page -->
+        <pb-navigation direction="backward" keyboard="left" emit='{{ .Get "id" }}' subscribe='{{ .Get "id" }}'>
+            <paper-button>
+                <iron-icon icon="icons:chevron-left"></iron-icon>
+            </paper-button>
+        </pb-navigation>
+    </footer>
+</pb-page>

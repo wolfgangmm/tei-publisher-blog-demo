@@ -1,0 +1,33 @@
+pb-page {
+    position: relative;
+    padding-top: 10px;
+    border-top: 1px solid #e0e0e0;
+}
+
+.embedded pb-navigation {
+    position: absolute;
+    top: 45%;
+}
+
+.embedded pb-navigation[direction="forward"] {
+    right: 0;
+}
+
+.nav {
+    height: 40px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e0e0e0;
+}
+pb-view {
+    margin-left: auto;
+    margin-right: auto;
+}
+.transcription {
+    overflow: auto;
+    display: flex;
+    justify-content: center;
+    height: 400px;
+}
+pb-navigation[direction="forward"] {
+    float: right;
+}
