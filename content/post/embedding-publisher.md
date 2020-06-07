@@ -2,7 +2,7 @@
 title: "Embedding TEI Publisher Components"
 date: 2020-06-05T20:41:18+02:00
 tags: ['TEI Publisher', 'webcomponents']
-draft: true
+draft: false
 ---
 
 This example shows how to embed TEI content into a static website using markdown for the content pages. The site was created with [Hugo](https://gohugo.io/), a popular static website generator.

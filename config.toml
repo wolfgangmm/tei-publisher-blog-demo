@@ -1,7 +1,7 @@
-baseURL = "http://localhost:1313/"
+baseURL = "https://teipublisher.onrender.com/"
 languageCode = "en"
 defaultContentLanguage = "en"                             # en / zh-cn / ... (This field determines which i18n file to use)
-title = "Even - A super concise theme for Hugo"
+title = "TEI Publisher and Hugo Demo"
 preserveTaxonomyNames = true
 enableRobotsTXT = true
 enableEmoji = true
@@ -21,7 +21,7 @@ googleAnalytics = ""      # UA-XXXXXXXX-X
 copyright = ""            # default: author.name ↓        # 默认为下面配置的author.name ↓
 
 [author]                  # essential                     # 必需
-  name = "olOwOlo"
+  name = "Wolfgang"
 
 [sitemap]                 # essential                     # 必需
   changefreq = "weekly"
