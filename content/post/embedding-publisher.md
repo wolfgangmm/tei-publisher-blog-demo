@@ -17,11 +17,12 @@ Hugo creates static files which you can either copy into an existing webserver o
 2. installed a standard theme ([even](https://github.com/olOwOlo/hugo-theme-even)) into `themes`
 3. copied `config.toml` from `themes/even/exampleSite` and modified it slightly
 4. copied `themes/even/layouts/partials/scripts.html` to `layouts/partials` and added two lines  to import the TEI Publisher component library ([view on github](https://github.com/wolfgangmm/tei-publisher-blog-demo/blob/master/layouts/partials/scripts.html)):
+   
     {{< pb-code-highlight html >}}
     <script src="https://unpkg.com/@webcomponents/webcomponentsjs@2.4.3/webcomponents-loader.js"></script>
-    
     <script type="module" src="https://unpkg.com/@teipublisher/pb-components@latest/dist/pb-components-bundle.js"></script>
     {{</ pb-code-highlight >}}
+
 5. in the same way copied `themes/even/layouts/partials/header.html` to change the logo
 6. created a [custom css file](https://github.com/wolfgangmm/tei-publisher-blog-demo/blob/master/static/css/components.css) in `static/css` and linked it from `config.toml`
 7. generated a set of favicons and extracted them into `/static`
