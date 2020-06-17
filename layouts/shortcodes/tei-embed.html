@@ -7,11 +7,13 @@
     {{ if .Get "xpath" }}
     <pb-view class="transcription" src='{{ .Get "id" }}' xpath='{{ .Get "xpath" }}'
         view='{{ (or (.Get "view") "div") }}' column-separator=".tei-cb"
-        append-footnotes animation emit='{{ .Get "id" }}' subscribe='{{ .Get "id" }}'></pb-view>
+        append-footnotes animation emit='{{ .Get "id" }}' subscribe='{{ .Get "id" }}'
+        disable-history></pb-view>
     {{ else }}
     <pb-view class="transcription" src='{{ .Get "id" }}'
         view='{{ (or (.Get "view") "div") }}' column-separator=".tei-cb"
-        append-footnotes animation emit='{{ .Get "id" }}' subscribe='{{ .Get "id" }}'></pb-view>
+        append-footnotes animation emit='{{ .Get "id" }}' subscribe='{{ .Get "id" }}'
+        disable-history></pb-view>
     {{ end }}
     <footer class="nav">
         <!-- Navigate to next page -->

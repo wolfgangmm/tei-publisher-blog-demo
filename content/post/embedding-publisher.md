@@ -47,7 +47,7 @@ The easiest approach is to directly embed HTML into markdown as demonstrated by 
         <pb-param name="header" value="short" />
     </pb-view>
     <pb-view class="transcription" src="kant" view="page" emit="kant" subscribe="kant"
-        append-footnotes animation></pb-view>
+        append-footnotes animation disable-history></pb-view>
 </pb-page>
 
 The source code for above example is given below:
@@ -67,7 +67,7 @@ The source code for above example is given below:
         <pb-param name="header" value="short" />
     </pb-view>
     <pb-view class="transcription" src="kant" view="page" emit="kant" subscribe="kant"
-        append-footnotes animation></pb-view>
+        append-footnotes animation disable-history></pb-view>
 </pb-page>
 {{</ pb-code-highlight >}}
 
